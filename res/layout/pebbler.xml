@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pebbler" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:text="Send modal alert"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/modal_alert_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="5dp"
+        android:hint="Notification Title"
+        android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/modal_alert_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modal_alert_title"
+        android:layout_marginTop="5dp"
+        android:hint="Message"
+        android:inputType="textMultiLine" >
+    </EditText>
+
+    <Button
+        android:id="@+id/send_modal_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/modal_alert_body"
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/modal_alert_body"
+        android:text="Send" />
+
+</RelativeLayout>
