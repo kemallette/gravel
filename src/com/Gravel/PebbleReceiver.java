@@ -8,6 +8,7 @@ import android.util.Log;
 public class PebbleReceiver extends BroadcastReceiver {
 	
 	public static final String TAG = "PebbleConnectionReceiever";
+
 	public static final String PEBBLE_CONNECTED = "com.getpebble.action.PEBBLE_CONNECTED";
 	public static final String PEBBLE_DISCONNECTED = "com.getpebble.action.PEBBLE_DISCONNECTED";
 	public static final String PEBBLE_RECEIVE_DATA = "com.getpebble.action.RECEIVE_DATA";
@@ -18,18 +19,21 @@ public class PebbleReceiver extends BroadcastReceiver {
 		final String pebbleMacAddress = intent.getStringExtra("address");
 		final String action = intent.getAction();
 
-		String message = "Couldn't match pebble broadcast intent action";
+		String message = "Couldn't match pebble broadcast intent action." + "\n" +
+				"MacAdress: " + pebbleMacAddress + "\n" + 
+				"Action: " + action;
 
 		if (action.equals(PEBBLE_CONNECTED)) {
 			
-			message = "PEBBLE_CONNECTED" + "\n" + "MacAdress: "
-					+ pebbleMacAddress + "\n" + "Action: " + intent.getAction();
+			message = "PEBBLE_CONNECTED" + "\n" + 
+			"MacAdress: " + pebbleMacAddress + "\n" + 
+			"Action: " + action;
 			
 		} else if (action.equals(PEBBLE_DISCONNECTED)) {
 			
 			message = "PEBBLE_DISCONNECTED" + "\n" + 
 			"MacAdress: " + pebbleMacAddress + "\n" + 
-			"Action: " + intent.getAction();
+			"Action: " + action;
 			
 		} else if(action.equals(PEBBLE_RECEIVE_DATA)){
 			
@@ -38,7 +42,7 @@ public class PebbleReceiver extends BroadcastReceiver {
 			
 			message = "Pebble Receiving Data" + "\n" + 
 			"MacAdress: " + pebbleMacAddress + "\n" + 
-			"Action: " + intent.getAction() + "\n" + 
+			"Action: " + action + "\n" + 
 			"Recipient: " + pebbleAppRecipient + "\n"+
 			"Data: " + pebbleData + "\n";
 			 

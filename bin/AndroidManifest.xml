@@ -30,8 +30,9 @@
             <intent-filter>
                 <action android:name="com.getpebble.action.PEBBLE_CONNECTED" />
                 <action android:name="com.getpebble.action.PEBBLE_DISCONNECTED" />
-                <action android:name="com.getpebble.action.RECEIVE_DATA"/>
+                <action android:name="com.getpebble.action.RECEIVE_DATA" />
                 <action android:name="com.getpebble.action" />
+                <action android:name="com.getpebble" />
             </intent-filter>
         </receiver>
     </application>
