@@ -1,4 +1,4 @@
-package com.example.pebbler;
+package com.Gravel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,13 +11,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
-import android.view.View;	
+import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Pebbler extends Activity implements OnClickListener {
-	public static final String TAG = "Pebbler";
+public class Gravel extends Activity implements OnClickListener {
+	public static final String TAG = "Gravel";
 	public static final String TITLE = "title", BODY = "body";
 	public static final String SEND_NOTIFICATION = 	"com.getpebble.action.SEND_NOTIFICATION";
 
